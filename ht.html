@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somthing Special</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Countdown Timer -->
+  <div id="countdown" class="countdown">
+    <h2>Countdown to Your Surprise</h2>
+    <p id="timer"></p>
+  </div>
+
+  <!-- Background Music for the First Page -->
+  <audio id="bg-music1" loop>
+    <source src="assets/ha.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Background Music for the Second Page -->
+  <audio id="bg-music2" loop>
+    <source src="assets/hm.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Page 1: Welcome with Hearts Animation -->
+  <div id="page1" class="page">
+    <div class="hearts">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+    <div id="welcome">
+      <h1>Happy Birthday, Haritha!</h1>
+      <button onclick="goToPage(2)">Next</button>
+    </div>
+  </div>
+
+  <!-- Page 2: Question Page -->
+  <div id="page2" class="page">
+    <h2>One last question:The place we visited 3 times?</h2>
+    <input type="text" id="answer" placeholder="Enter your answer here">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="hint">Hint: The temple we visited...</p>
+    <div id="video-content" style="display: none;">
+      <h2>Here's a special video just for you my love....!</h2>
+      <video id="video" controls width="600" style="aspect-ratio: 16/9;">
+        <source src="assets/video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
